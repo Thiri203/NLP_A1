@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Similarity Search</title>
+</head>
+<body>
+    <h2>Search Similar Context</h2>
+
+    <form method="POST">
+        <input type="text" name="query" placeholder="Enter query" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h3>Top 10 Similar Words</h3>
+        <ul>
+            {% for word, score in results %}
+                <li>{{ word }} : {{ "%.4f"|format(score) }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
