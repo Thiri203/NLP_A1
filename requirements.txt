@@ -1,0 +1,6 @@
+flask
+numpy
+torch
+scipy
+gensim
+pandas
